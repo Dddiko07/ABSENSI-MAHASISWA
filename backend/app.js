@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 
 app.use("/absensi", absensiRoutes);
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server berjalan di http://localhost:${process.env.PORT}`);
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
